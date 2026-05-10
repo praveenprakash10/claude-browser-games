@@ -62,12 +62,26 @@ All movement is `position += velocity * dt` (delta-time in seconds, capped at 0.
 
 ## Git workflow
 
-Every meaningful change should be committed and pushed:
+**Commit and push after every meaningful unit of work.** This is required — not optional. The goal is that the GitHub remote always reflects current progress so nothing is ever lost.
+
+What warrants a commit:
+- Any new feature or mechanic added
+- Any bug fixed
+- Any visual or gameplay tweak
+- Adding or modifying a level or enemy type
+- Structural refactors
 
 ```bash
-git add <files>
-git commit -m "descriptive message"
+git add <specific files>
+git commit -m "short imperative subject line
+
+Optional body explaining why, not what."
 git push
 ```
+
+Commit message rules:
+- Subject line: imperative mood, ≤72 chars (e.g. `Add runner enemy dodge behavior`, not `Added` or `Adding`)
+- Be specific — `Fix bullet collision radius for tank enemy` beats `Fix bug`
+- No filler like "various fixes" or "update stuff"
 
 Remote: `https://github.com/praveenprakash10/claude-browser-games` (main branch).
